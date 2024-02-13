@@ -25,7 +25,7 @@
 <body class="">
     <main class="min-h-screen bg-[#010313] bg-[url(../images/background.png)] bg-no-repeat bg-center font-poppins">
         <!-- home page starts here -->
-        <section class="home min-h-screen text-white text-center flex flex-col justify-center items-center">
+        <section id="home" class=" min-h-screen text-white text-center flex flex-col justify-center items-center">
             <div>
                 <h1 class=" text-[170px] font-anton">ALPHABET CLASH</h1>
             </div>
@@ -33,13 +33,13 @@
                 <p class="font-medium text-2xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
             </div>
             <div>
-                <button class="btn bg-white mt-14 text-black font-semibold text-2xl ">Play Now</button>
+                <button onclick="play()" class="btn bg-white mt-14 text-black font-semibold text-2xl ">Play Now</button>
             </div>
         </section>
 
         <!-- home page ends here -->
         <!-- play section starts here -->
-        <section class="play-ground hidden">
+        <section id="play-ground" class=" hidden">
             <div class="flex flex-col justify-center items-center gap-20 pt-20">
                 <div
                     class="artboard artboard-horizontal phone-6  border-8 border-rouned-2xl border-[#010313CC] bg-[#FFFFFFB2] ">
@@ -117,6 +117,7 @@
         <!-- score section ends here -->
     </main>
     <script src="./script.js"></script>
+    <script src="./utility.js"></script>
 </body>
 
 </html>
