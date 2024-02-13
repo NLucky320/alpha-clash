@@ -7,8 +7,16 @@
 // }
 
 function continueGame() {
+  // generate a random alphabet
   const alphabet = getARandomAlphabet();
   console.log("your random alphabet", alphabet);
+
+  // set random generate alphabet to screen
+  const currentAlphabet = document.getElementById("current-alphabet");
+  currentAlphabet.innerText = alphabet;
+
+  // set background color
+  setBackgroundColorById(alphabet);
 }
 
 function play() {

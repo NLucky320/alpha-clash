@@ -20,3 +20,13 @@ function getARandomAlphabet() {
   //   console.log(index, alphabet);
   return alphabet;
 }
+
+// background color
+function setBackgroundColorById(elementId) {
+  const element = document.getElementById(elementId);
+  element.classList.add("bg-[#FFA500]");
+}
+function removeBackgroundColorById(elementId) {
+  const element = document.getElementById(elementId);
+  element.classList.remove("bg-[#FFA500]");
+}
