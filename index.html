@@ -9,20 +9,39 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <style>
+        .font-anton {
+            font-family: "Anton", sans-serif;
+        }
+
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
 </head>
 
-<body>
-    <section class="home">
+<body class="">
+    <main class="min-h-screen bg-[#010313] bg-[url(../images/background.png)] bg-no-repeat bg-center font-poppins">
+        <section class="home min-h-screen text-white text-center flex justify-center items-center flex-col">
+            <div>
+                <h1 class=" text-[170px] font-anton">ALPHABET CLASH</h1>
+            </div>
+            <div>
+                <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+            </div>
+            <div>
+                <button class="btn bg-white mt-14 text-black">Play Now</button>
+            </div>
+        </section>
+        <section class="play-ground">
 
-    </section>
-    <section class="play-ground">
+        </section>
+        <section class="score">
 
-    </section>
-    <section class="score">
-
-    </section>
+        </section>
+    </main>
     <script src="./script.js"></script>
 </body>
 
