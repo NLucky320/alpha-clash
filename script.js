@@ -17,24 +17,42 @@ function handleKeyboardButtonPress(event) {
   // check matches or not
   if (playerPressed === expectedAlphabet) {
     console.log("you got a point");
+    const currentScore = getTextElementValueById("current-score");
+    const updatedScore = currentScore + 1;
+    setTextElementValueById("current-score", updatedScore);
 
-    // get the current score
-    const currentScoreElement = document.getElementById("current-score");
-    const currentScoreText = currentScoreElement.innerText;
-    const currentScore = parseInt(currentScoreText);
+    // // get the current score
+    // const currentScoreElement = document.getElementById("current-score");
+    // const currentScoreText = currentScoreElement.innerText;
+    // const currentScore = parseInt(currentScoreText);
 
-    // increase the score by 1
-    const newScore = currentScore + 1;
+    // // increase the score by 1
+    // const newScore = currentScore + 1;
 
-    // show the updated score
+    // // show the updated score
 
-    currentScoreElement.innerText = newScore;
+    // currentScoreElement.innerText = newScore;
 
     // start a new round
     removeBackgroundColorById(expectedAlphabet);
     continueGame();
   } else {
     console.log("you missed a life");
+
+    const currentLife = getTextElementValueById("initial-life");
+    const updatedLife = currentLife - 1;
+    setTextElementValueById("initial-life", updatedLife);
+
+    // get the current life number
+    // const currentLifeElement = document.getElementById("initial-life");
+    // const currentLifeText = currentLifeElement.innerText;
+    // const currentLife = parseInt(currentLifeText);
+
+    // // decrease the score by 1
+    // const newLife = currentLife - 1;
+
+    // // show the updated life
+    // currentLifeElement.innerText = newLife;
   }
 }
 
