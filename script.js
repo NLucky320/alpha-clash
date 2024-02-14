@@ -43,6 +43,10 @@ function handleKeyboardButtonPress(event) {
     const updatedLife = currentLife - 1;
     setTextElementValueById("initial-life", updatedLife);
 
+    if (updatedLife === 0) {
+      gameOver();
+    }
+
     // get the current life number
     // const currentLifeElement = document.getElementById("initial-life");
     // const currentLifeText = currentLifeElement.innerText;
@@ -74,4 +78,9 @@ function play() {
   hideElementById("home");
   showElementById("play-ground");
   continueGame();
+}
+
+function gameOver() {
+  hideElementById("play-ground");
+  showElementById("final-score");
 }
