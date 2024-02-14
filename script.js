@@ -9,6 +9,12 @@
 function handleKeyboardButtonPress(event) {
   const playerPressed = event.key;
 
+  // stop the game if pressed esc
+
+  if (playerPressed === "Escape") {
+    gameOver();
+  }
+
   const currentAlphabetElement = document.getElementById("current-alphabet");
   const currentAlphabet = currentAlphabetElement.innerText;
   const expectedAlphabet = currentAlphabet.toLowerCase();
