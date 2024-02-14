@@ -6,10 +6,29 @@
 //   playGround.classList.remove("hidden");
 // }
 
+function handleKeyboardButtonPress(event) {
+  const playerPressed = event.key;
+
+  const currentAlphabetElement = document.getElementById("current-alphabet");
+  const currentAlphabet = currentAlphabetElement.innerText;
+  const expectedAlphabet = currentAlphabet.toLowerCase();
+  // console.log(playerPressed, expectedAlphabet);
+
+  // check matches or not
+  if (playerPressed === expectedAlphabet) {
+    console.log("you got a point");
+    removeBackgroundColorById(expectedAlphabet);
+    continueGame();
+  } else {
+    console.log("you missed a life");
+  }
+}
+
+document.addEventListener("keyup", handleKeyboardButtonPress);
+
 function continueGame() {
   // generate a random alphabet
   const alphabet = getARandomAlphabet();
-  console.log("your random alphabet", alphabet);
 
   // set random generate alphabet to screen
   const currentAlphabet = document.getElementById("current-alphabet");
