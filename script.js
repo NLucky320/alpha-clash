@@ -90,4 +90,14 @@ function play() {
 function gameOver() {
   hideElementById("play-ground");
   showElementById("final-score");
+
+  // update final score
+  // 1.get the final score
+  const lastScore = getTextElementValueById("current-score");
+  setTextElementValueById("last-score", lastScore);
+
+  // clear the last selected background color
+
+  const currentAlphabet = getElementTextById("current-alphabet");
+  removeBackgroundColorById(currentAlphabet);
 }
