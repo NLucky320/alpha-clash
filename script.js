@@ -17,6 +17,20 @@ function handleKeyboardButtonPress(event) {
   // check matches or not
   if (playerPressed === expectedAlphabet) {
     console.log("you got a point");
+
+    // get the current score
+    const currentScoreElement = document.getElementById("current-score");
+    const currentScoreText = currentScoreElement.innerText;
+    const currentScore = parseInt(currentScoreText);
+
+    // increase the score by 1
+    const newScore = currentScore + 1;
+
+    // show the updated score
+
+    currentScoreElement.innerText = newScore;
+
+    // start a new round
     removeBackgroundColorById(expectedAlphabet);
     continueGame();
   } else {
