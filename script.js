@@ -75,8 +75,15 @@ function continueGame() {
 }
 
 function play() {
+  // hide everything and show playground
   hideElementById("home");
+  hideElementById("final-score");
   showElementById("play-ground");
+
+  // reset life
+  setTextElementValueById("initial-life", 5);
+  setTextElementValueById("current-score", 0);
+
   continueGame();
 }
 

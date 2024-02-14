@@ -10,11 +10,11 @@ function showElementById(elementId) {
 
 function getARandomAlphabet() {
   // create alphabet array
-  const alphabetString = "abcdefghijklmnopqrstuvwxyz";
+  const alphabetString = "abcdefghijklmnopqrstuvwxyz/";
   const alphabets = alphabetString.split("");
 
-  // generate random index between 0-25
-  const index = Math.round(Math.random() * 25);
+  // generate random index between 0-26
+  const index = Math.round(Math.random() * 26);
 
   const alphabet = alphabets[index];
   //   console.log(index, alphabet);
